@@ -1,16 +1,8 @@
 # <div align = center>gSpan</div>
 
-##### For Chinese readme, please go to [README-Chinese](https://github.com/betterenvi/gSpan/blob/master/README-Chinese.md). 
+ **gSpan** is an algorithm for mining frequent subgraphs.
 
-**gSpan** is an algorithm for mining frequent subgraphs.
-
-This program implements gSpan with Python. The repository on GitHub is [https://github.com/betterenvi/gSpan](https://github.com/betterenvi/gSpan). This implementation borrows some ideas from [gboost](http://www.nowozin.net/sebastian/gboost/).
-
-### Undirected Graphs
-This program supports undirected graphs, and produces same results with gboost on the dataset [graphdata/graph.data](https://github.com/betterenvi/gSpan/blob/master/graphdata/graph.data). 
-
-### Directed Graphs
-So far(date: 2016-10-29), gboost does not support directed graphs. This program implements gSpan for directed graphs. More specific, this program can mine frequent directed subgraph that has at least one node that can reach other nodes in the subgraph. But correctness is not guaranteed since the author did not do enough testing. After running several times on datasets [graphdata/graph.data.directed.1](https://github.com/betterenvi/gSpan/blob/master/graphdata/graph.data.directed.1) and [graph.data.simple.5](https://github.com/betterenvi/gSpan/blob/master/graphdata/graph.data.simple.5), there is no fault.
+gSpan implemented on Python 2.7. This program supports undirected graphs as well as directed graphs. 
 
 ### How to run
 
@@ -20,7 +12,7 @@ This program supports both **Python 2** and **Python 3**.
 $ python main.py [-s min_support] [-n num_graph] [-l min_num_vertices] [-u max_num_vertices] [-d True/False] [-v True/False] [-p True/False] [-w True/False] [-h] database_file_name 
 ```
 
-##### Some examples
+##### example runs
 
 - Read graph data from ./graphdata/graph.data, and mine undirected subgraphs given min support is 5000
 ```
@@ -65,7 +57,8 @@ On the dataset [./graphdata/graph.data](https://github.com/betterenvi/gSpan/blob
 | 600 | 1235 | 7 m 29 s |
 | 400 | 2710 | 12 m 53 s |
 
-
+### Forked from
+- [gSpan](https://github.com/betterenvi/gSpan)
 
 ### Reference
 - [Paper](http://www.cs.ucsb.edu/~xyan/papers/gSpan-short.pdf)
